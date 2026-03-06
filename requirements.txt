@@ -1,0 +1,6 @@
+# LLM Provider
+openai==1.63.2
+requests==2.32.3
+
+# Data Handling & Environment
+python-dotenv==1.0.1
