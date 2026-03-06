@@ -28,13 +28,15 @@ class AutonomousAgent:
            ```bash
            your_command_here
            ```
-        2. Commands you can use: subfinder, httpx, naabu, nuclei, curl, nmap, grep, cat, ls.
+        2. Commands you can use: subfinder, httpx, naabu, nuclei, gowitness, curl, nmap, grep, cat, ls.
         3. Do NOT run destructive commands (rm, overwrite, etc).
-        4. If you have enough information and are finished, output:
+        4. When you find a live web server or a vulnerability, you MUST take a screenshot of it using gowitness.
+           Example: `gowitness single https://example.com`
+        5. If you have enough information and are finished, output:
            ```report
-           [Your final markdown summary of vulnerabilities found]
+           [Your final markdown summary of vulnerabilities found, including paths to any screenshots taken]
            ```
-        5. Think step-by-step. First find subdomains, then find live ones, then scan ports, then run nuclei.
+        6. Think step-by-step. First find subdomains, then find live ones, then scan ports, then run nuclei.
         """
         
         self.history.append({"role": "system", "content": self.system_prompt})
